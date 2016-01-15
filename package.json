@@ -1,0 +1,18 @@
+{
+    "version": "1.0.0",
+    "name": "jspm-local",
+    "description": "Load packages using jspm from a local folder.",
+    "private": false,
+    "main": "jspmlocal.js",
+	"files": ["jspmlocal.js"],
+  "repository": {
+        "type": "git",
+        "url": "https://github.com/Netatwork-de/jspm-local.git"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {},
+  "dependencies": {
+    "graceful-fs": "^4.1.2",
+    "rsvp": "^3.1.0"
+  }
+}
