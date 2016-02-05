@@ -105,8 +105,8 @@ LocalLocation.prototype = {
     locate: function(repo) {
         return getPackageObject(repo)
             .then(function(packageObject) {
-                if (packageObject && packageObject.notfound) return packageObject;
-                return null;
+                if (packageObject && packageObject.notfound) return {redirect: "npm:" + repo};
+                //
             })
     },
 	
