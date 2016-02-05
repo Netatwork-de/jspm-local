@@ -101,6 +101,14 @@ LocalLocation.prototype = {
 				return result;
 			});
 	},
+    
+    locate: function(repo) {
+        return getPackageObject(repo)
+            .then(function(packageObject) {
+                if (packageObject && packageObject.notfound) return packageObject;
+                return null;
+            })
+    },
 	
 	download: function(repo, version, hash, versionData, outDir) {
 		var packageDist = path.resolve('..', repo);
